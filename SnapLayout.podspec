@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SnapLayout'
-  s.version          = '1.9.9'
+  s.version          = '2.0.0'
   s.summary          = 'Concise API for iOS Auto Layout'
   s.swift_version    = '5.0'
 
@@ -22,11 +22,11 @@ Imagine applying any or all of the following constraints in one line of code: to
 bottom, width, height, centerX, centerY. This is possible with `SnapLayout`.
 DESC
 
-  s.homepage         = 'https://github.com/sp71/SnapLayout'
+  s.homepage         = 'https://github.com/pokanop/SnapLayout'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Satinder Singh' => 'satindersingh71@gmail.com' }
-  s.source           = { :git => 'https://github.com/sp71/SnapLayout.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/pokanop/SnapLayout.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
