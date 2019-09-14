@@ -1,5 +1,5 @@
 PODS:
-  - SnapLayout (1.8.0)
+  - SnapLayout (1.9.8)
 
 DEPENDENCIES:
   - SnapLayout (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SnapLayout: bef399cd9d9cf1959e249edd58eadc60836862dc
+  SnapLayout: 80e9f630b4bdd066f3e934a4f5bb1b568899ba1f
 
 PODFILE CHECKSUM: f947662404d501fe6ed60b4fab66a7756c4c8b40
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
