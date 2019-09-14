@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0530113E1ED26EE100B20287 /* SnapLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530113C1ED26EE100B20287 /* SnapLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		053011411ED26EE100B20287 /* SnapLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0530113A1ED26EE100B20287 /* SnapLayout.framework */; };
-		053011421ED26EE100B20287 /* SnapLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0530113A1ED26EE100B20287 /* SnapLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0530114B1ED26F4300B20287 /* SnapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053011471ED26F4300B20287 /* SnapConfig.swift */; };
 		0530114C1ED26F4300B20287 /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053011481ED26F4300B20287 /* Aliases.swift */; };
 		0530114D1ED26F4300B20287 /* SnapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053011491ED26F4300B20287 /* SnapManager.swift */; };
@@ -40,37 +39,6 @@
 		AA2784244D094631048E254E /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FABB4D7ED7FFCBF6D2004F /* Pods_Example_iOS.framework */; };
 		AF8A727DA9B91B01EF8A921D /* Pods_Example_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F6C5506F684799DEB173A3 /* Pods_Example_MacOS.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0530113F1ED26EE100B20287 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 053011391ED26EE100B20287;
-			remoteInfo = SnapLayout;
-		};
-		05D8B35C1E8E1D7C00E5819A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SnapLayout_Example;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		053011461ED26EE100B20287 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				053011421ED26EE100B20287 /* SnapLayout.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0530113A1ED26EE100B20287 /* SnapLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,7 +335,6 @@
 				055B806C1EBEB04E00F84772 /* Frameworks */,
 				055B806D1EBEB04E00F84772 /* Resources */,
 				843987F5E779D748ADA2AAAE /* [CP] Embed Pods Frameworks */,
-				C9EDFAB9AE16081E7498578F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,12 +354,10 @@
 				05D8B3541E8E1D7C00E5819A /* Frameworks */,
 				05D8B3551E8E1D7C00E5819A /* Resources */,
 				AFAD1C13BEA5E79EA31A04BD /* [CP] Embed Pods Frameworks */,
-				6EB55EEF682E7E1FB89BCD05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				05D8B35D1E8E1D7C00E5819A /* PBXTargetDependency */,
 			);
 			name = SnapLayout_ExampleTests;
 			productName = SnapLayout_ExampleTests;
@@ -407,14 +372,11 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				053011461ED26EE100B20287 /* Embed Frameworks */,
 				DA2A7AFEC7CEE388BF9882D0 /* [CP] Embed Pods Frameworks */,
-				72B9380A7E4CF6C758EA4FE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				053011401ED26EE100B20287 /* PBXTargetDependency */,
 			);
 			name = "Example-iOS";
 			productName = SnapLayout;
@@ -516,13 +478,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51ACA26936D8A2514F641FE8 /* [CP] Check Pods Manifest.lock */ = {
@@ -531,43 +496,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-MacOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6EB55EEF682E7E1FB89BCD05 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapLayout_ExampleTests/Pods-SnapLayout_ExampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72B9380A7E4CF6C758EA4FE8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7879A03A83F8F4B27A1726ED /* [CP] Check Pods Manifest.lock */ = {
@@ -576,13 +514,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapLayout_ExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		843987F5E779D748ADA2AAAE /* [CP] Embed Pods Frameworks */ = {
@@ -591,9 +532,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-MacOS/Pods-Example-MacOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapLayout-macOS/SnapLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -606,28 +550,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SnapLayout_ExampleTests/Pods-SnapLayout_ExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapLayout-iOS/SnapLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapLayout_ExampleTests/Pods-SnapLayout_ExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9EDFAB9AE16081E7498578F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-MacOS/Pods-Example-MacOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA2A7AFEC7CEE388BF9882D0 /* [CP] Embed Pods Frameworks */ = {
@@ -636,9 +568,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapLayout-iOS/SnapLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -699,19 +634,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		053011401ED26EE100B20287 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 053011391ED26EE100B20287 /* SnapLayout */;
-			targetProxy = 0530113F1ED26EE100B20287 /* PBXContainerItemProxy */;
-		};
-		05D8B35D1E8E1D7C00E5819A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* Example-iOS */;
-			targetProxy = 05D8B35C1E8E1D7C00E5819A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		055B80771EBEB04E00F84772 /* Main.storyboard */ = {
