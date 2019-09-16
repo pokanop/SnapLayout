@@ -1,11 +1,11 @@
-# [![SnapLayout](https://github.com/sp71/SnapLayout/blob/master/Assets/snapLayout.png?raw=true)](#)
+# [![SnapLayout](https://github.com/pokanop/SnapLayout/blob/master/Assets/snapLayout.png?raw=true)](#)
 [![Build Status](https://travis-ci.org/pokanop/SnapLayout.svg?branch=master)](https://travis-ci.org/pokanop/SnapLayout)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SnapLayout.svg)](http://cocoadocs.org/docsets/SnapLayout)
 [![Coverage Status](https://coveralls.io/repos/github/pokanop/SnapLayout/badge.svg?branch=master)](https://coveralls.io/github/pokanop/SnapLayout?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/SnapLayout.svg?style=flat)](http://cocoapods.org/pods/SnapLayout)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/SnapLayout.svg?style=flat)](http://cocoapods.org/pods/SnapLayout)
-[![License](https://img.shields.io/cocoapods/l/SnapLayout.svg?style=flat)](https://github.com/sp71/SnapLayout/blob/master/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/SnapLayout.svg?style=flat)](https://github.com/pokanop/SnapLayout/blob/master/LICENSE)
 
 Concise API for Auto Layout. SnapLayout extends `UIView` and `NSView` to deliver a list of APIs to improve readability while also shortening constraint code. Internally uses AutoLayout to provide the best experience. With SnapLayout, developers can remove boilerplate code but not at the cost of readability.
 
@@ -14,7 +14,7 @@ Imagine applying any or all of the following constraints in one line of code to 
 ## Why Use It?
 Lets use a real world example. Lets say the following view needs to be added. It has a centerX, centerY, width, and height constraint.
  
-![SnapLayout](https://github.com/sp71/SnapLayout/blob/master/Assets/exampleView.png?raw=true)
+![SnapLayout](https://github.com/pokanop/SnapLayout/blob/master/Assets/exampleView.png?raw=true)
 
 [Apple](https://developer.apple.com/reference/uikit/nslayoutanchor):
 
@@ -53,7 +53,7 @@ pod "SnapLayout"
 
 ### Installation with [Carthage](https://github.com/Carthage/Carthage)
 ```
-github "sp71/SnapLayout"
+github "pokanop/SnapLayout"
 ```
 
 ## Usage
