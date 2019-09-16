@@ -1,6 +1,5 @@
 # [![SnapLayout](https://github.com/pokanop/SnapLayout/blob/master/Assets/snapLayout.png?raw=true)](#)
 [![Build Status](https://travis-ci.org/pokanop/SnapLayout.svg?branch=master)](https://travis-ci.org/pokanop/SnapLayout)
-[![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SnapLayout.svg)](http://cocoadocs.org/docsets/SnapLayout)
 [![Coverage Status](https://coveralls.io/repos/github/pokanop/SnapLayout/badge.svg?branch=master)](https://coveralls.io/github/pokanop/SnapLayout?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/SnapLayout.svg?style=flat)](http://cocoapods.org/pods/SnapLayout)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
