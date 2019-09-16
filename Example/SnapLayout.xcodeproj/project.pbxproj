@@ -760,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 251B900F26D856DFDA068490 /* Pods-SnapLayout_ExampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -781,6 +782,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3604471B64FB21F2C1E70DC5 /* Pods-SnapLayout_ExampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
