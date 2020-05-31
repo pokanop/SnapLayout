@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SnapLayout'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = 'Concise API for iOS Auto Layout'
   s.swift_version    = '5.0'
 
