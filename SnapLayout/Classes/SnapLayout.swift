@@ -31,7 +31,7 @@ public extension View {
               trailing: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat? = nil, centerX: CGFloat? = nil,
               centerY: CGFloat? = nil, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
         translatesAutoresizingMaskIntoConstraints = false
-        var snapManager = SnapManager(view: self)
+        let snapManager = SnapManager(view: self)
         var constraintList = [NSLayoutConstraint]()
         defer {
             constraintList.forEach { $0.priority = priority }
