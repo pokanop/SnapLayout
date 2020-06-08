@@ -164,16 +164,22 @@ public extension View {
     /// - Parameters:
     ///   - trailingView: View who will be shown as the trailingView
     ///   - constant: Constant value to apply constraint with (default 0)
+    ///   - centerY: Constant offset to apply from centerXAnchor  (if nil, not applied)
     ///   - priority: LayoutPriority to apply upon constraint (default required)
     ///   - isActive: Boolean determining if constraint should be activated (default true)
     /// - Returns: SnapManager holding all the values associated with constraints
     @discardableResult
-    func snap(trailingView: View, constant: CGFloat = 0, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
+    func snap(trailingView: View, constant: CGFloat = 0, centerY: CGFloat? = nil, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
         translatesAutoresizingMaskIntoConstraints = false
         let snapManager = SnapManager(view: self)
         snapManager.trailing = trailingView.os_anchors.leadingAnchor.constraint(equalTo: trailingAnchor, constant: constant)
         snapManager.trailing?.priority = priority
         snapManager.trailing?.isActive = isActive
+        if let centerY = centerY {
+            snapManager.centerY = centerYAnchor.constraint(equalTo: trailingView.os_anchors.centerYAnchor, constant: centerY)
+            snapManager.centerY?.priority = priority
+            snapManager.centerY?.isActive = isActive
+        }
         return snapManager
     }
     
@@ -182,16 +188,22 @@ public extension View {
     /// - Parameters:
     ///   - leadingView: View who will be shown as the leadingView
     ///   - constant: Constant value to apply constraint with (default 0)
+    ///   - centerY: Constant offset to apply from centerXAnchor  (if nil, not applied)
     ///   - priority: LayoutPriority to apply upon constraint (default required)
     ///   - isActive: Boolean determining if constraint should be activated (default true)
     /// - Returns: SnapManager holding all the values associated with constraints
     @discardableResult
-    func snap(leadingView: View, constant: CGFloat = 0, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
+    func snap(leadingView: View, constant: CGFloat = 0, centerY: CGFloat? = nil, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
         translatesAutoresizingMaskIntoConstraints = false
         let snapManager = SnapManager(view: self)
         snapManager.leading = leadingAnchor.constraint(equalTo: leadingView.os_anchors.trailingAnchor, constant: constant)
         snapManager.leading?.priority = priority
         snapManager.leading?.isActive = isActive
+        if let centerY = centerY {
+            snapManager.centerY = centerYAnchor.constraint(equalTo: leadingView.os_anchors.centerYAnchor, constant: centerY)
+            snapManager.centerY?.priority = priority
+            snapManager.centerY?.isActive = isActive
+        }
         return snapManager
     }
     
@@ -200,16 +212,22 @@ public extension View {
     /// - Parameters:
     ///   - bottomView: View who will be shown as the bottomView
     ///   - constant: Constant value to apply constraint with (default 0)
+    ///   - centerX: Constant offset to apply from centerXAnchor  (if nil, not applied)
     ///   - priority: LayoutPriority to apply upon constraint (default required)
     ///   - isActive: Boolean determining if constraint should be activated (default true)
     /// - Returns: SnapManager holding all the values associated with constraints
     @discardableResult
-    func snap(bottomView: View, constant: CGFloat = 0, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
+    func snap(bottomView: View, constant: CGFloat = 0, centerX: CGFloat? = nil, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
         translatesAutoresizingMaskIntoConstraints = false
         let snapManager = SnapManager(view: self)
         snapManager.bottom = bottomView.os_anchors.topAnchor.constraint(equalTo: bottomAnchor, constant: constant)
         snapManager.bottom?.priority = priority
         snapManager.bottom?.isActive = isActive
+        if let centerX = centerX {
+            snapManager.centerX = centerXAnchor.constraint(equalTo: bottomView.os_anchors.centerXAnchor, constant: centerX)
+            snapManager.centerX?.priority = priority
+            snapManager.centerX?.isActive = isActive
+        }
         return snapManager
     }
     
@@ -218,16 +236,22 @@ public extension View {
     /// - Parameters:
     ///   - topView: View who will be shown as the bottomView
     ///   - constant: Constant value to apply constraint with (default 0)
+    ///   - centerX: Constant offset to apply from centerXAnchor  (if nil, not applied)
     ///   - priority: LayoutPriority to apply upon constraint (default required)
     ///   - isActive: Boolean determining if constraint should be activated (default true)
     /// - Returns: SnapManager holding all the values associated with constraints
     @discardableResult
-    func snap(topView: View, constant: CGFloat = 0, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
+    func snap(topView: View, constant: CGFloat = 0, centerX: CGFloat? = nil, priority: LayoutPriority = LayoutPriorityRequired, isActive: Bool = true) -> SnapManager {
         translatesAutoresizingMaskIntoConstraints = false
         let snapManager = SnapManager(view: self)
         snapManager.top = topAnchor.constraint(equalTo: topView.os_anchors.bottomAnchor, constant: constant)
         snapManager.top?.priority = priority
         snapManager.top?.isActive = isActive
+        if let centerX = centerX {
+            snapManager.centerX = centerXAnchor.constraint(equalTo: topView.os_anchors.centerXAnchor, constant: centerX)
+            snapManager.centerX?.priority = priority
+            snapManager.centerX?.isActive = isActive
+        }
         return snapManager
     }
     
